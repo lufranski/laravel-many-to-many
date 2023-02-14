@@ -19,7 +19,7 @@ class ProductSeeder extends Seeder
     public function run()
     {
         
-        Product::factory() -> count(20) -> make() -> each(function($i){
+        Product::factory() -> count(60) -> make() -> each(function($i){
 
             // Foreign key
             $typology = Typology::inRandomOrder() -> first();
