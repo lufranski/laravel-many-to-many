@@ -18,3 +18,7 @@ use App\Http\Controllers\MainController;
 Route::get('/', [MainController::class, 'home']) -> name('home');
 
 Route::get('/products', [MainController::class, 'products']) -> name('products');
+
+Route::get('/create', [MainController::class, 'create']) -> name('create');
+
+Route::post('/store', [MainController::class, 'store']) -> name('store');

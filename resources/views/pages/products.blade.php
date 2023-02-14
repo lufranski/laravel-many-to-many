@@ -2,21 +2,31 @@
 
 @section('content')
     
-    <h1>CONTENT GOES HERE</h1>
-
     <h1>List o' products:</h1>
 
-    <ul>
+    <a href="{{ route('create')}}">
+        Create new product
+    </a>
 
-    </ul>
-    @foreach ($products as $product)
+    <a href="{{ route('home')}}" class="ms-2">
+        Oh heck, go back!
+    </a>
 
-        <li>
-            [#{{ $product -> code }}] - 
-            {{ $product -> name }} - 
-            {{ $product -> price }} $ - 
-            {{ $product -> weight }} kg
-        </li>
-    @endforeach
+    <div class="wrapper vertical">
+
+        <ul>
+    
+            @foreach ($products as $product)
+        
+                <li>
+                    [#{{ $product -> code }}] - 
+                    {{ $product -> name }} - 
+                    {{ $product -> price }} $ - 
+                    {{ $product -> weight }} kg
+                </li>
+            @endforeach
+        </ul>
+    </div>
+
 
 @endsection
