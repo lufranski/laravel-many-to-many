@@ -13,6 +13,15 @@ class MainController extends Controller
     
     public function home() {
 
-        return view('pages.home');
+        $categories = Category::all();
+
+        return view('pages.home', compact('categories'));
+    }
+
+    public function products() {
+
+        $products = Product::all();
+
+        return view('pages.products', compact('products'));
     }
 }
