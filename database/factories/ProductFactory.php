@@ -21,8 +21,8 @@ class ProductFactory extends Factory
             'code' => fake() -> regexify('[A-Z0-9]{5}'),
             'name' => fake() -> words(rand(1, 3), true),
             'description' => fake() -> text(rand(50, 200)),
-            'price' => fake() -> randomFloat(2),
-            'weight' => fake() -> randomFloat(2),
+            'price' => fake() -> randomFloat(2, 1, 999),
+            'weight' => fake() -> randomFloat(2, 1, 999),
         ];
     }
 }
